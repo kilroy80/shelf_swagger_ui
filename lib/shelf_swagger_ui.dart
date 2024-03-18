@@ -96,7 +96,8 @@ class SwaggerUI {
   ///```
   FutureOr<Response> call(Request request) {
     final file = File(fileSchemaPath);
-    final mainSpec = basename(file.path);
+    // final mainSpec = basename(file.path);
+    final mainSpec = file.path;
     final dirParent = file.parent;
     final uri = request.url;
     final path = uri.path;
